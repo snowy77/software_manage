@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lx.dao.courseDao">
+    <!-- 	根据用户名查询 -->
+	<resultMap type="com.lx.model.course" id="ClassResultMap">
+         <id property="cno" column="cno"/>
+        <result property="cname" column="cname"/>
+         <association property="user" javaType="com.lx.model.user">
+             <id property="uno" column="uno"/>
+             <result property="name" column="name"/>
+             <result property="shool" column="shool"/>
+             <result property="no" column="no"/>
+             <result property="password" column="password"/>
+             <result property="email" column="email"/>
+             <result property="flag" column="flag"/>
+         </association>
+     </resultMap>
+	<select id="queryAll" resultMap="ClassResultMap">
+		select c.cno,c.cname,u.* from course c,user u where c.uno=u.uno
+	</select>
+	<select id="queryByNo" resultMap="ClassResultMap">
+		select c.cno,c.cname,u.* from course c,user u where c.uno=u.uno and cno=#{cno}
+	</select>
+	<select id="queryByUno" resultMap="ClassResultMap">
+		select c.cno,c.cname,u.* from course c,user u where c.uno=u.uno and c.uno=#{uno}
+	</select>
+	
+	
+	<insert id="insertCourse" parameterType="com.lx.model.user">
+		insert into course(uno) values (#{uno})
+	</insert>
+	<delete id="deleteCourse" parameterType="int">
+		DELETE FROM course
+		WHERE
+			uno = #{uno}
+	</delete>
+</mapper>

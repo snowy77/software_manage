@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+	<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+		"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+	<mapper namespace="com.lx.dao.imageDao">
+	<!-- 通过id查询用户信息 -->
+	<select id="selectById" parameterType="java.lang.Integer" resultType="com.lx.model.image">
+		select *
+		from  image	
+		where id = #{id}	
+	</select>
+	<!-- 查询用户信息 -->
+	<select id="selectAll" resultType="com.lx.model.image">
+		select *  from  image;	
+	</select>
+	<!-- 添加用户 -->
+	<insert id="insertImage" parameterType="com.lx.model.image">
+		insert into image(name, img) values (#{name},#{img})
+	</insert>
+	<!-- 修改用户 -->
+	<update id="updateImage" parameterType="com.lx.model.image">
+		update image
+		set 
+		 name = #{name},
+		 img = #{img}
+		where id = #{id}
+	</update>
+	<delete id="deleteImage" parameterType="int">
+		delete from image
+    	where id = #{id}
+	</delete>
+	
+	</mapper>

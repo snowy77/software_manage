@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/ajaxfileupload.js"></script>
+<script src="./js/media.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/enroll_.css">
+
+</head>
+<body>
+<div class="header">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+			<span class="navbar-brand mb-0 h1">软件项目管理</span>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto" id="navbarSupportedContent">
+					<li class="nav-item">
+						<a href="#" class="nav-link ">首页</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link disabled">行业信息</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">下载区</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">成绩查询</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">留言板</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">网上测试</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">联系我们</a>
+					</li>
+				</ul>
+				<span>
+					<form action="index.action">
+						<button type="submit" class="btn btn-default" id="submit0">返回首页</button>
+					</form>
+				</span>
+			</div>
+		</nav>
+	</div>
+	<div class="containt">
+		<p class="h1">课程上传！</p>
+	    
+	    <div class="form-group row">
+	    	<label class="col-sm-4" style="text-align:right;"> 标题：</label>
+	    	<div class="col-sm-8">
+	    		<input type="text" name="title"/>
+	    	</div>
+	    </div>
+	     <div class="form-group row">
+	    	<label class="col-sm-4" style="text-align:right;"> 视频：</label>
+	    	<div class="col-sm-8">
+	    		<input id="media" type="file" name="files"/>
+	    	</div>
+	    </div>
+	     <div class="form-group row">
+	    	<label class="col-sm-4" style="text-align:right;">   封面：</label>
+	    	<div class="col-sm-8">
+	    		<input id="picture" type="file" name="files" />
+	    	</div>
+	    </div>
+	     <div class="form-group row">
+	    	<label class="col-sm-4" style="text-align:right;"> 详情介绍：</label>
+	    	<div class="col-sm-8">
+	    		<input type="text" name="descript"/>
+	    	</div>
+	    </div>
+	     <div class="form-group row">
+	    	<label class="col-sm-4" style="text-align:right;"> 上传时间：</label>
+	    	<div class="col-sm-8">
+	    		 <input type="text" name="uptime"/>
+	    	</div>
+	    </div>
+	     <div class="form-group row">
+	    	<button type="button" class="btn btn-outline-dark btn-block" id="sure">上传</button>
+	    </div>
+	      
+<!--         标题： -->
+<!--          <input type="text" name="title"/> -->
+<!--               视频： -->
+<!--         <span style='color:blue;'>(支持'3gp','rmvb','flv','wmv','avi','mkv','mp4','mp3','wav'格式)</span> -->
+<!-- 	    <input id="media" type="file" name="files"/> -->
+<!-- 		    封面： -->
+<!-- 		<input id="picture" type="file" name="files" /> -->
+<!-- 		    详情介绍： -->
+<!-- 		     <input type="text" name="descript"/> -->
+<!-- 		    上传时间： -->
+<!-- 		     <input type="text" name="uptime"/> -->
+	    
+<!-- 	    <button type="button" id="sure">上传</button> -->
+	   
+    
+	</div>
+	<div class="footer" >
+		<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+	</div>
+
+
+	
+    
+    
+  
+
+</body>
+</html>

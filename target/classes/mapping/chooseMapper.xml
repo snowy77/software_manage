@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lx.dao.chooseDao">
+    <!-- 	根据用户名查询 -->
+	<resultMap type="com.lx.model.choose" id="ClassResultMap">
+         <id property="no" column="no"/>
+         <result property="grade" column="grade"/>
+        <association property="course" javaType="com.lx.model.course">
+             <id property="cno" column="cno"/>
+             <result property="cname" column="cname"/>
+             <result property="uno" column="uno1"/>
+         </association>
+         <association property="user" javaType="com.lx.model.user">
+             <id property="uno" column="uno2"/>
+             <result property="name" column="name"/>
+             <result property="shool" column="shool"/>
+             <result property="no" column="no"/>
+             <result property="password" column="password"/>
+             <result property="email" column="email"/>
+             <result property="flag" column="flag"/>
+         </association>
+     </resultMap>
+	<select id="queryAll" resultMap="ClassResultMap">
+		select a.no,a.grade,b.*,c.* from choose a,course b,user c where a.uno=c.uno and a.cno=b.cno
+	</select>
+	<select id="queryByUno" resultMap="ClassResultMap" parameterType="int">
+		select a.no,a.grade,b.*,c.* from choose a,course b,user c where a.uno=c.uno and a.cno=b.cno and a.uno=#{uno}
+	</select>
+	<select id="queryByCno" resultMap="ClassResultMap" parameterType="int">
+		select a.no,a.grade,b.*,c.* from choose a,course b,user c where a.uno=c.uno and a.cno=b.cno and a.cno=#{cno}
+	</select>
+	<select id="queryByGrade" resultMap="ClassResultMap" parameterType="int">
+	select a.no,a.grade,b.*,c.* from choose a,course b,user c where a.uno=c.uno and a.cno=b.cno and a.grade&lt;60 and a.cno=#{cno}
+	</select>
+	<insert id="addChoose">
+		INSERT INTO choose
+		(cno,uno)
+		VALUES (#{cno},#{uno})
+	</insert>
+	<delete id="deleteChoose">
+		DELETE FROM choose
+		WHERE
+			uno = #{uno}
+			and cno=#{cno}
+	</delete>
+	<delete id="deleteChooseNo" parameterType="int">
+		DELETE FROM choose
+		WHERE
+			no = #{no}
+	</delete>
+	<update id="updateChoose_teacher">
+		UPDATE choose
+		SET grade=#{grade}
+		WHERE
+			no=#{no}
+	</update>
+	<update id="updateChoose_student" parameterType="int">
+		UPDATE choose
+		SET cno=#{cno},
+		WHERE
+			uno = #{uno}
+	</update>
+	
+	
+</mapper>

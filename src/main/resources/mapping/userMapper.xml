@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lx.dao.userDao">
+    <!-- 	根据用户名查询 -->
+	<select id="queryByUno" resultType="com.lx.model.user" parameterType="int">
+		<!-- 具体的sql -->
+		SELECT
+			*
+		FROM
+			user
+		WHERE
+			uno = #{uno}
+	</select>
+	<!-- 	根据用户名查询 -->
+	<select id="queryByid" resultType="com.lx.model.user">
+		<!-- 具体的sql -->
+		select * from user where no=#{no} and name=#{name}
+	</select>
+<!-- 	根据身份查询 -->
+	<select id="queryByFlag" resultType="com.lx.model.user" parameterType="String">
+		SELECT
+			uno,
+			name,
+			shool,
+			no,
+			password,
+			email,
+			flag
+		FROM
+			user
+		WHERE
+			flag = #{flag}
+	</select>
+<!-- 	修改用户信息 -->	
+	<update id="updateUser" parameterType="com.lx.model.user" >
+		UPDATE user
+		SET shool=#{shool},
+			no=#{no},
+			password=#{password},
+			email=#{email},
+			flag=#{flag},
+			name=#{name}
+		WHERE
+			uno = #{uno}
+	</update>
+	<!-- 	删除用户-->
+	<delete id="deleteUser" parameterType="int">
+		DELETE FROM user
+		WHERE
+			uno = #{uno}
+	</delete>
+	<!-- 	添加用户 -->
+	<insert id="addUser" parameterType="com.lx.model.user">
+		INSERT INTO user
+		(name,shool,no,password,email,flag)
+		VALUES (#{name},#{shool},#{no},#{password},#{email},#{flag})
+	</insert>
+</mapper>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/enroll_.css">
+</head>
+<body>
+	<div class="header">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+			<span class="navbar-brand mb-0 h1">软件项目管理</span>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto" id="navbarSupportedContent">
+					<li class="nav-item">
+						<a href="#" class="nav-link ">首页</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link disabled">行业信息</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">下载区</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">成绩查询</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">留言板</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">网上测试</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">联系我们</a>
+					</li>
+				</ul>
+				<span>
+					<form action="index.action">
+						<button type="submit" class="btn btn-default" id="submit0">返回首页</button>
+					</form>
+				</span>
+			</div>
+		</nav>
+	</div>
+	<div class="containt">
+		<p class="h1">欢迎注册！</p>
+		<form autocomplete="off">
+			<div class="form-group row">
+				<label for="school" class="col-sm-2 col-from-label">学校</label>
+				<div class="col-sm-8">
+					<select  name="shool" class="form-control">
+						<option value="aa大学">aa大学</option>
+						<option value="bb大学">bb大学</option>
+						<option value="cc大学">cc大学</option>
+					</select>
+				</div>
+
+			</div>
+			<div class="form-group row">
+				<label for="no" class="col-sm-2 col-from-label">教师号/学号</label>
+				<div class="col-sm-8">
+					<input type="text" name="no" id="no" class="form-control required" placeholder="教师号/学号">
+				</div>
+				<span id="span1"></span>
+				
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-from-label">用户名</label>
+				<div class="col-sm-8">
+					<input type="text" name="name" id="name" placeholder="用户名" class="form-control required ">
+				</div>
+				<span id="span2"></span>
+			</div>
+			<div class="form-group row">
+				<label for="password" class="col-sm-2 col-from-label">密码</label>
+				<div class="col-sm-8">
+					<input type="password" name="password" id="password" placeholder="密码" class="form-control required ">
+				</div>
+				<span id="span3"></span>
+			</div>
+			<div class="form-group row">
+				<label for="sure" class="col-sm-2 col-from-label">确认密码</label>
+				<div class="col-sm-8">
+					<input type="password" id="sure" placeholder="确认密码" class="form-control required ">
+				</div>
+				<span id="span4"></span>
+			</div>
+			<div class="form-group row">
+				<label for="email" class="col-sm-2 col-from-label">电子邮箱</label>
+				<div class="col-sm-8">
+					<input type="email" name="email" id="email" placeholder="电子邮箱" class="form-control required ">
+				</div>
+				<span id="span5"></span>
+
+
+			</div>
+
+			<div class="form-group row">
+				<label for="" class="col-sm-2"></label>
+				<div class="col-sm-8">
+					<input type="radio" name="flag" value="1" checked="checked">教师
+					<input type="radio" name="flag" value="2">学生
+				</div>
+			</div>
+			<div class="form-group row">
+				<button type="button" class="btn btn-outline-dark btn-block" id="enroll">注册</button>
+			</div>
+		</form>
+		<p><a href="index.html">已有账号，去登陆！</a></p>
+	</div>
+	<div class="footer" >
+		<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/enroll_.js"></script>
+</body>
+</html>

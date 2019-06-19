@@ -1,0 +1,134 @@
+*{
+			margin: 0;
+			padding: 0;
+			font-size: 1.4rem;
+		}
+		body{
+			background: #ddd;
+		}
+		ul{
+			list-style: none;
+		}
+		.navbar-brand{
+			font-size:2.5rem;
+		}
+		.btn{
+			font-size:1.5rem;
+		}
+		.modal-dialog {
+    		max-width: 1250px;
+		}
+		
+		.containt{
+		margin: 0 auto;
+		width: 70%;
+		}
+		.containt_l{
+		width: 400px;
+		float: left;
+		border: 1px solid #f4f4f4;
+		background: #fff;
+		height:auto;
+		}
+
+		
+		.containt_l li a{
+			border-bottom: 1px solid #eee;
+			text-align: center;
+			height:100px;
+			display: block;
+			color: #333;
+			line-height: 60px;
+		}
+		.containt_l li.active a{
+			background: #f60;
+			color: #fff;
+			height:100px;
+		}
+		.containt_r{
+			float: right;
+			width: 75%;
+		}
+		.containt_r li{
+			margin-bottom: 30px;
+			background: #fff;
+			
+			display: block;
+			padding:100px 150px;
+			
+		}
+		.containt_r li>h3{
+			padding-bottom:50px;
+		}
+		.containt_r li>div{
+			text-align:left;
+		}
+		.banner{
+		background: #fff;
+		width: 80%;
+		height: 1500px;
+		font-size: 40px;
+		line-height: 600px;
+		text-align: center;
+		margin:60px auto;
+	}
+	.modal .modal-dialog{
+			background-color: white;
+		}
+	.modal .modal-body .row1{
+		margin-bottom: 5px;
+	}
+	#nameinfo{
+	width: auto;
+              height: 20px;
+              padding: 1px 5px;
+              text-align: center;
+              background-color: #000;
+              opacity: 0.5;
+              color: #fff;
+              position: fixed;
+              left: 50%;
+              margin-left: -50px;
+              top: 93%;
+              border-radius: 20px;
+              display: none;
+
+	}
+	.footer{
+		text-align:center;
+		margin:50px 0; 
+		font:normal 14px/24px 'MicroSoft YaHei';
+		background-color: #ff6600;
+		height:250px;
+		margin-bottom:0px;
+		color: white; 
+		padding: 50px 0;
+	}
+	
+	.addul{
+		list-style: none;
+		margin: 0px;
+		width: 300px;
+	}
+	.addul li{
+		margin: 5px;
+		background: #ff6600;
+		text-align:center;
+	}
+	.addul li a{
+		text-decoration: none;
+		color: white;
+		font-size:1.5rem;
+	}
+	.menu0{
+		width:300px;
+		position: absolute;
+		right: 20px;
+		top:100px;
+		display: block;
+	}
+	#replace{
+		width:400px;
+		height:120px;
+		text-align:right;
+	}

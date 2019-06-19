@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+	<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+		"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+	<mapper namespace="com.lx.dao.replyDao">
+	<!-- 通过id查询用户信息 -->
+	<select id="selectByWords"  resultType="com.lx.model.reply">
+		select *
+		from  reply
+		where words_id = #{words_id} and media_id=#{media_id}	
+	</select>
+	<!-- 添加用户 -->
+	<insert id="insertReply" parameterType="com.lx.model.reply">
+		insert into reply(name,date,content,words_id,media_id) values (#{name},#{date},#{content},#{words_id},#{media_id})
+	</insert>
+	
+	</mapper>

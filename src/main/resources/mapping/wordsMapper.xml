@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+	<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+		"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+	<mapper namespace="com.lx.dao.wordsDao">
+	<!-- 通过id查询用户信息 -->
+	<select id="selectByMedia" parameterType="java.lang.Integer" resultType="com.lx.model.words">
+		select *
+		from  words
+		where media_id = #{media_id}	
+	</select>
+	<!-- 添加用户 -->
+	<insert id="insertWords" parameterType="com.lx.model.words">
+		insert into words(name,date,content,media_id) values (#{name},#{date},#{content},#{media_id})
+	</insert>
+	
+	</mapper>

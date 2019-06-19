@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lx.dao.newsDao">
+    <select id="getAllNews"  resultType="com.lx.model.news">
+		SELECT * FROM newst
+	</select>
+	<insert id="addNews" parameterType="com.lx.model.news" >
+	    insert into newst(head,summary,body,time,img,type)
+	    values(#{head},#{summary},#{body},#{date},#{img},#{type})
+	</insert>
+	
+	<delete id="deleteNews" parameterType="int" >
+	    delete from newst
+	    where id=#{id}
+	</delete>
+	
+	<update id="updateNews" parameterType="com.lx.model.news">
+	    update newst
+	    set head=#{head},body=#{body},time=#{date},summary=#{summary},img=#{img},type=#{type}
+	    where id=#{id}
+	    
+	</update>
+	<select id="getByType" parameterType="String" resultType="com.lx.model.news">
+	select * from newst
+	 where type=#{type}
+	</select>
+	
+	<select id="getContent" parameterType="int" resultType="com.lx.model.news">
+	select * from newst
+	 where id=#{id}
+	</select>
+</mapper>
